@@ -9,9 +9,9 @@ class APRS:
   
   def makeTimestamp(self, format, day, hour, minute, sec='00'):
     if (format == 'z'): 
-       return '{:02d}{:02d}{:02d}z'.format(day, hour, minute)
+       return '{:02d}{:02d}{:02d}z'.format(int(day), int(hour), int(minute))
     else:
-       return '{:02d}{:02d}{:02d}h'.format(hour, minute, sec)
+       return '{:02d}{:02d}{:02d}h'.format(int(hour), int(minute), int(sec))
     
   def makePosition(self, lat, lon, speed, course, altitude, symbol):
      # FIXME: altitude is not supported yet,
