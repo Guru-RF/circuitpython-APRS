@@ -13,9 +13,7 @@ class APRS:
     else:
        return '{:02d}{:02d}{:02d}h'.format(int(hour), int(minute), int(sec))
     
-  def makePosition(self, lat, lon, speed, course, altitude, symbol):
-     # FIXME: altitude is not supported yet,
-
+  def makePosition(self, lat, lon, speed, course, symbol):
      # check lat/lon
      if (lat < -89.99999 or lat > 89.99999 or
         lon < -179.99999 or lon > 179.99999):
